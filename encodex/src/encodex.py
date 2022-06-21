@@ -25,7 +25,7 @@ def main():
         converter = Converter(config)
         converter.start()
     print("Exiting...")
-    input("Press any key to exit...")
+    input("Press enter to exit...")
 
 
 if __name__ == '__main__':

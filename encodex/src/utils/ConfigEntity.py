@@ -12,7 +12,7 @@ class Config:
 
     def __init__(self,filename = "config.ini"):
         print("Loading Configurations...")
-        self.exclusion = [os.path.abspath("../src")]
+        self.exclusion = []
         self.subfix = [".m"]
         self.fromEncode = ["GBK"]
         self.toEncode = "UTF-8"
@@ -35,7 +35,8 @@ class Config:
         exclusionStr = ""
         try:
             exclusionStr = parser.get(group, 'exclusion')
-            self.exclusion.extend(exclusionStr.split(","))
+            if(not ""==exclusionStr):
+                self.exclusion.extend(exclusionStr.split(","))
         except:
             pass
         finally:

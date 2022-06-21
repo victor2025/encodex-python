@@ -22,4 +22,5 @@ tar -czvf $dirname.tar.gz $dirname
 mv $dirname.tar.gz ./$dirname/$dirname.tar.gz
 # 移动文件夹
 mkdir ../release/$1
+rm -r ../release/$1/$dirname
 mv $dirname ../release/$1/$dirname
