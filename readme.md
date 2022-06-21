@@ -43,8 +43,8 @@ toEncode=utf-8
   - pyinstaller 5.1
 
 ##### Windows
-- python 3.6.0
-  - chardet 4.0.0
+- python 3.8.3
+  - chardet 3.0.4
   - pyinstaller 5.1
 
 **对于与上述不一致的环境，建议重新构建(执行pack.sh/pack.cmd)或直接运行源代码*

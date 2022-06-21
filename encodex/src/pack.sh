@@ -1,4 +1,11 @@
 osname=$(uname -s|tr A-Z a-z)
+# 处理win下的osname
+result=$(echo $osname|grep "mingw")
+if [ "$result" != "" ]
+then
+	osname="win"
+fi
+# 处理其他名称
 archname=$(uname -m|tr A-Z a-z)
 dirname=encodex-$osname-$archname-$1
 # 编译打包

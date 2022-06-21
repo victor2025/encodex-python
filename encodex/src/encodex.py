@@ -18,12 +18,14 @@ def main():
     while(not isPathOrFile(aimPath) and not isExit(aimPath)):
         print("Filename or path is not valid! Please insert again (or exit): ",end="")
         aimPath = input()
+    print("")
     if(not isExit(aimPath)):
         config.aimPath = aimPath
         # 开始转换
         converter = Converter(config)
         converter.start()
     print("Exiting...")
+    input("Press any key to exit...")
 
 
 if __name__ == '__main__':

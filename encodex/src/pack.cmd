@@ -2,7 +2,7 @@
 pyinstaller -F encodex.py
 rm -r ./build encodex.spec
 :: 移动文件
-set dirname=encodex-win-amd64-%1%
+set dirname=encodex-win-x86_64-%1%
 mkdir %dirname%
 mv ./dist/encodex %dirname%/encodex
 rm -r dist
