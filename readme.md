@@ -15,18 +15,38 @@ toEncode=utf-8
 ````
 ---
 ### 源代码
-1. encodex.py
+##### 1. encodex.py
+
 - 程序入口
 - 用户输入控制
 - 程序流程控制
-2. ConfigEntity.py
+  
+##### 2. ConfigEntity.py
 - 配置文件读取
 - 配置保存
-3. Converter.py
+  
+##### 3. Converter.py
 - 配置处理
 - 文件扫描
 - 文件过滤
 - 文件验证
 - 转码
-4. tools.py
+  
+##### 4. tools.py
 - 工具方法
+
+---
+### 环境和依赖
+##### Linux
+- python 3.8.8
+  - chardet 4.0.0
+  - pyinstaller 5.1
+
+##### Windows
+- python 3.6.0
+  - chardet 4.0.0
+  - pyinstaller 5.1
+
+**对于与上述不一致的环境，建议重新构建(执行pack.sh/pack.cmd)或直接运行源代码*
+
+**pyinstaller 仅用于构建程序，与程序运行无关*
