@@ -9,20 +9,20 @@ from utils.tools import *
 
 def main():
     # 程序启动
-    print("Converter started...")
+    print("Encodex starting...\n")
     # 读取配置文件
     config = Config()
     # 读取用户参数
-    print("Please insert filename or path: ",end="")
+    print("Please insert filename or path (or exit): ",end="")
     aimPath = input()
-    while(not isPathOrFile(aimPath)):
-        print("Filename or path is not valid! Please insert again: ",end="")
+    while(not isPathOrFile(aimPath) and not isExit(aimPath)):
+        print("Filename or path is not valid! Please insert again (or exit): ",end="")
         aimPath = input()
-    config.aimPath = aimPath
-    # 开始转换
-    converter = Converter()
-    converter.setConfig(config)
-    converter.start()
+    if(not isExit(aimPath)):
+        config.aimPath = aimPath
+        # 开始转换
+        converter = Converter(config)
+        converter.start()
     print("Exiting...")
 
 

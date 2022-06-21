@@ -18,8 +18,20 @@ def isPathOrFile(path:str):
         return True
     return False
 
+def isExit(str1:str):
+    return "exit"==str1.lower()
+
 # 包含通配符的字符串比较
 def equalIgnoreCase(str1:str, str2:str):
     if(str1=="*" or str2=="*"):
         return True
     return (str1.lower()==str2.lower())
+
+def getSubfix(filename:str, seperator:str):
+    return filename.split(seperator)[-1]
+
+def alias(charset:str):
+    if(charset is None): return
+    if(charset.lower()=="iso-8859-5"):
+        return "gbk"
+    return charset
