@@ -1,5 +1,9 @@
 # Encodex
-## 基于Python的文件转码工具
+
+文件编码转换工具，使用Python编写
+
+[项目地址](https://github.com/victor2025/encodex-python)
+
 ### 配置文件
 - exclusion: 需要排除的目录或文件(0~n)
 - subfix: 需要转码的文件扩展名(1~n, 默认"m")，可使用通配符"*"(不推荐)
